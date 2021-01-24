@@ -1,0 +1,33 @@
+<mat-toolbar color="primary" class="toolbar-header">
+  <mat-toolbar-row>
+    <section id="header">
+      <div class="header-logo">
+        <a href="#" class="zmart-link">
+    
+          <img src="https://firebasestorage.googleapis.com/v0/b/kyte-7c484.appspot.com/o/Od1dVBlmN6fW8y%2F4B9A6B01-C475-4CCD-B400-4498EEAF8F33.jpg?alt=media&token=0fc9002c-fcc7-4811-ac78-3129a8cd0a0d" alt="Zmart logo" id="zmart-logo">
+    
+        </a>
+      </div>
+      <div class="header-menu">
+        <ul class="menu-tray">
+            <li class="menu-icon">
+                <a href="#">SHOP</a>
+            </li>
+            <li class="menu-icon">
+              
+                <a class="menu-icon" routerLink="cart">CART</a>
+              
+            </li>
+            <li class="menu-icon">
+              <a href="#">LogOut</a>
+            </li>
+        </ul>
+      </div>
+    </section>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container class="main-container">
+  <mat-sidenav-content >
+      <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
