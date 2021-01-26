@@ -10,6 +10,20 @@
       </div>
       <div class="header-menu">
         <ul class="menu-tray">
+            <mat-nav-list>
+              <a mat-button routerLink=" /merchant " *ngIf="isLoggedIn && showMerchant ">Merchant</a>
+              <a mat-button routerLink="/customer " *ngIf="isLoggedIn && showCustomer ">CUSTOMER</a>
+          </mat-nav-list>
+
+          <mat-nav-list *ngIf="!isLoggedIn ">
+            <a mat-button routerLink="/register">Register</a>
+            <a mat-button routerLink="/login">Login</a>
+        </mat-nav-list>
+        
+        <mat-nav-list *ngIf="isLoggedIn">
+            Hi, {{username}}
+            <a mat-button (click)="logout()">Logout</a>
+        </mat-nav-list>
             <li class="menu-icon">
                 <a href="#">SHOP</a>
             </li>
@@ -17,9 +31,6 @@
               
                 <a class="menu-icon" routerLink="cart">CART</a>
               
-            </li>
-            <li class="menu-icon">
-              <a href="#">LogOut</a>
             </li>
         </ul>
       </div>
