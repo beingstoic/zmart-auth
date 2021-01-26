@@ -3,7 +3,7 @@ export interface LoginResponse{
     username: String;
     fullname: String;
     email: String;
-    role: String;
+    roles: String[];
 }
 export interface LoginRequest{
     username: String;
